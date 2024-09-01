@@ -1,0 +1,8 @@
+runtime: nodejs18
+
+handlers:
+  - url: /
+    static_files: dist/hacks-website/index.html
+    upload: dist/hacks-website/index.html
+  - url: /
+    static_dir: dist/hacks-website

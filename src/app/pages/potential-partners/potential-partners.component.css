@@ -1,0 +1,12 @@
+.owl-carousel .owl-stage-outer {
+  overflow: hidden;
+}
+
+.owl-carousel .owl-stage {
+  display: flex;
+  transition: transform 2s linear; /* Match the autoplaySpeed for smooth transition */
+}
+
+.owl-carousel .owl-item {
+  flex-shrink: 0;
+}

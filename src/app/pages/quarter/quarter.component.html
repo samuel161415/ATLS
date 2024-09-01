@@ -1,0 +1,18 @@
+<section
+  id="why-attend"
+  class="bg-black m-auto py-5 px-5 mb-16 w-full flex flex-col justify-center items-center"
+>
+  <div class="max-w-6xl flex flex-col items-center text-center">
+    <p class="sm:text-4xl text-center text-2xl font-medium mb-4 text-white">
+        Why Attend ATLS
+      </p>
+    <div
+      class="grid grid-cols-2 pt-8 gap-4 max-lg:grid-cols-2 max-md:grid-cols-1 items-stretch"
+    >
+      <app-track-card
+        *ngFor="let attend of attends"
+        [attend]="attend"
+      ></app-track-card>
+    </div>
+  </div>
+</section>

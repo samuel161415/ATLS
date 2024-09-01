@@ -1,0 +1,148 @@
+<div
+  id="landing"
+  class="bg_svg min-h-screen px-3 md:px-5 w-full pt-[50px] bg-opacity-60 relative flex flex-col justify-center items-center"
+>
+  <div
+    class="bg_svg max-w-7xl mb-10 pb-5 flex flex-col md:flex-row justify-center items-end drop-shadow-2xl"
+  >
+    <div
+      class="order-2 md:order-1 text-white max-md:mb-5 flex-1 flex flex-col justify-end max-md:items-center"
+    >
+    
+      <section
+        class="left col-span-2 px-5 flex flex-col items-center md:items-start justify-center"
+      >
+        <div
+          class="w-full flex flex-col max-md:items-center items-start leading-relaxed mb-2"
+        >
+          <p
+            class="text-left w-full max-md:text-center text-xl font-bold md:text-3xl lg:text-4xl"
+          >
+            African Tech Leadership Summit
+          </p>
+          <p
+            class="font-semibold text-left w-full max-md:text-center text-xl pb-3"
+          >
+            Innovation in African Technology Leadership
+          </p>
+        </div>
+
+        <div
+          class="bg-blue-950 bg-opacity-50 p-3 rounded-lg flex flex-col w-full justify-center"
+        >
+          <div class="flex flex-col justify-center md:items-start mb-3">
+            <div class="relative">
+              <p
+                class="text-xl md:mb-2 lg:inline lg:whitespace-nowrap text-center md:text-start"
+              >
+                Hackathon Semifinals Has Started!
+              </p>
+
+              <div class="flex items-start md:text-lg font-normal py-3">
+                <img src="assets/star.svg" alt="star" class="pr-5" />
+                <p class="">
+                  The summit brings together Africa's brightest
+                  <strong
+                    class="font-bold text-transparent bg-gradient-to-r from-gold  to-yellow-400 bg-clip-text"
+                    >tech students,
+                    emerging entrepreneurs,</strong
+                  >
+                  and
+                  <strong
+                    class="font-bold text-transparent bg-gradient-to-r from-gold  to-yellow-400  bg-clip-text"
+                    >innovative leaders</strong
+                  >
+                  to showcase the
+                  continent's tech ecosystem, foster collaboration, and ignite
+                  transformative conversations.
+                  
+                </p>
+              </div>
+              
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col md:flex-row max-md:items-center justify-start"
+          >
+            <button
+              class="max-md:mt-5 text-sm rounded-full px-8 py-3 text-white transition-all bg-gradient-to-r from-gold  to-yellow-400  cursor-pointer ease-out duration-300 left-1/2 hover:bg-gradient-to-r from-gold-700 "
+            >
+              <span>Buy Tickets Now</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="order-1 md:order-2 flex-1 flex items-end relative w-full">
+      <div class="stack w-full" id="bigVideo">
+        <div
+          class="text-center aspect-[96/65] w-full md:w-[95%] max-sm:w-full card bg-black"
+        >
+          <div
+            class="absolute -inset-[2px] mx-auto bg-gradient-to-r from-gold to-yellow-400 rounded-2xl"
+            aria-hidden="true"
+          ></div>
+
+          <div
+            class="absolute inset-0 mx-auto h-full w-full bg-gold rounded-2xl overflow-hidden"
+            aria-hidden="true"
+          >
+            <div class="relative h-full w-full">
+              <video
+                autoplay
+                [muted]="isMuted"
+                loop
+                class="w-full object-cover h-full"
+              >
+                <source
+                  src="https://drive.google.com/file/d/1aO6f8oKcMXqKzodnSe1ZENRj7fbTMMad/view"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+        <div
+          class="text-center aspect-[94/56] card w-4/5 max-sm:w-full bg-gold"
+        ></div>
+        <div
+          class="text-center aspect-[92/58] card w-4/5 max-sm:w-full bg-gold"
+        ></div>
+      </div>
+      <!-- <video
+        autoplay
+        [muted]="isMuted"
+        loop
+        class="w-full object-cover h-full md:h-3/4"
+      >
+        <source
+          src="https://res.cloudinary.com/eskalate/video/upload/v1718713749/Hackathon_2023_Highlights.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video> -->
+    </div>
+  </div>
+  <div
+    (click)="scrollDown()"
+    class="rounded-full max-md:hidden text-white border-2 p-2 animate-bounce cursor-pointer mx-auto absolute bottom-4 left-1/2"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-8 h-8"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+      />
+    </svg>
+  </div>
+</div>

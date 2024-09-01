@@ -1,0 +1,136 @@
+export const years = [
+  {
+    color: "#41516C",
+    title: "G5 Education Launch",
+    year: "November, 2023",
+    desc: "A2SV proudly initiated the A2SV Generation 5 Education, welcoming 215 students for in-person education and 90 students for remote learning.",
+  },
+  {
+    color: "#FBCA3E",
+    title: "A2SV AI for Africa Hackathon",
+    year: "Aug - Nov, 2023",
+    desc: "We hosted the biggest hackathon in Africa reaching over 47 African countries. The top 9 teams competed in Ethiopia, presenting different impactful digital solutions for the continent.",
+  },
+  {
+    color: "#E24A68",
+    title: "Building Digital Projects for Africa",
+    year: "January, 2023",
+    desc: "Since January 2023, A2SV's Core Development teams of software engineers have been dedicatedly working on six community-centric projects. Those are SkillBridge, Rate Eat, Adot, Gojo, Akil, and AfroChat. These products are set to enter the market as early startups, addressing challenges and enhancing everyday life",
+  },
+
+  {
+    title: "G4 Education Launch",
+    color: "#1B5F8C",
+    year: "December, 2022",
+    desc: "We started the fourth group training and welcomed 207 students.",
+  },
+  {
+    title: "Opportunities at Top Tech Companies",
+    color: "#4CADAD",
+    year: "August, 2022",
+    desc: "By August, the total number of placements was 31. Our students became interns and full-time workers in Google, Amazon, Linkedin, Palantir, Databricks & Bloomberg",
+  },
+  {
+    title: "Securing Full-Time Roles at Google",
+    color: "#41516C",
+    year: "January, 2022",
+    desc: "All 3 A2SV students who did internships at Google received and signed full-time software engineering offers with Google.",
+  },
+  {
+    title: "New Partnership: AASTU University, Ethiopia",
+    color: "#E24A68",
+    year: "December, 2021",
+    desc: "We expanded to a second university in Ethiopia (Addis Ababa Science and Technology University) and started training 3 new groups of 100+ students both in AASTU and AAU.",
+  },
+  {
+    title: "New Interview Partners",
+    color: "#FFB534",
+    year: "October, 2021",
+    desc: "We formed interview partnerships with Google, LinkedIn, Palantir, Databricks, and InstaDeep.",
+  },
+  {
+    title: "Internship Offers from Google",
+    color: "#597E52",
+    year: "April, 2021",
+    desc: "3 of our first group members got internship offers from Google.",
+  },
+  {
+    title: "59% Pass Google SWE Interviews",
+    color: "#7BD3EA",
+    year: "January, 2021",
+    desc: "59% of our first group of trainees passed Google internship interviews after the second round of training.",
+  },
+  {
+    title: "G2 Education Launch",
+    color: "#163020",
+    year: "December, 2020",
+    desc: "We started second group training with 35 new students.",
+  },
+  {
+    title: "TrackSym Project",
+    color: "#7E30E1",
+    year: "October, 2020",
+    desc: 'Our students created a COVID-19 tracking app called TrackSym for Ethiopia"s Ministry of Health.',
+  },
+  {
+    title: "27% Pass Google SWE Interviews",
+    color: "#FFB534",
+    year: "March, 2020",
+    desc: "27% of our first group of trainees passed Google internship interviews after 3 months of training.",
+  },
+  {
+    title: "Partnerships with Donors",
+    color: "#092635",
+    year: "February, 2020",
+    desc: "We formed partnerships with Google, Palantir and Coinbase.",
+  },
+  {
+    title: "A2SV Journey Begins",
+    color: "#3081D0",
+    year: "November, 2019",
+    desc: "A2SV was founded in Ethiopia.",
+  },
+];
+export const timeline = [
+  {
+    number: "1",
+    color: "#41516C",
+    title: "Expo Hall",
+    desc: "Featuring AI for Impact Hackathon Finalists, Core Dev Projects, Ethiopian Startups, Corporate Sponsor Booths from 11:00 am to 6:00 pm",
+    year: "12-13 October, 2024",
+    startDate: "October 12, 2024",
+    endDate: "October 13, 2024",
+    final: false,
+  },
+  {
+    number: "2",
+    color: "#3081D0",
+    title: "Technical and Entrepreneurial Workshops",
+    desc: "2:00pm Opening Remarks Workshop, 2:30 pm Workshop 1, 3:00pm - 8:00pm Investor Pitches from Finalists and CoreDev, 4:00pm Workshop 2, 5:00pm Workshop 3",
+    year: "October 14, 2024",
+    startDate: "October 14, 2024",
+    endDate: "October 14, 2024",
+    final: false,
+  },
+  {
+    number: "3",
+    color: "#FFB534",
+    title: "Workshops and Leadership Sessions",
+    desc: "2:00pm Workshop 4, 3:00pm Leadership Session & Day 1 Welcome for General Audience, 3:30pm Leadership Session, 5:00pm - 7:00pm Jury Pitches from CoreDev, 7:00pm Leadership Session Day 1 wrap up, 8:00pm General dinner",
+    year: "October 15, 2024",
+    startDate: "October 15, 2024",
+    endDate: "October 15, 2024",
+    final: false,
+  },
+  {
+    number: "4",
+    color: "#163020",
+    title: "Leadership Sessions and Finale Ceremony",
+    desc: "3:00pm Leadership Session & Day 2 Welcome for General Audience, 3:30pm - 6:00pm Jury Pitches from Finalists, 7:00pm Closing Ceremony and Winners, 8:00pm VIP dinner",
+    year: "October 16, 2024",
+    startDate: "October 16, 2024",
+    endDate: "October 16, 2024",
+    final: false,
+  }
+];
+

@@ -1,0 +1,29 @@
+<div *ngIf="showModal" class="backdrop-blur  overflow-x-hidden max-sm:p-5 overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex">
+  <div class="relative max-md:hidden w-full mt-8  max-w-6xl max-h-full flex flex-col rounded-3xl bg-black justify-center items-center">
+    <button (click)="closeModal()" class="absolute right-0 top-0 mt-4 mr-4 text-3xl font-semibold leading-none text-gray-600 outline-none focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-1.72 6.97a.75.75 0 10-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 101.06 1.06L12 13.06l1.72 1.72a.75.75 0 101.06-1.06L13.06 12l1.72-1.72a.75.75 0 10-1.06-1.06L12 10.94l-1.72-1.72z" clip-rule="evenodd" />
+      </svg>
+    </button>
+    <iframe class="w-full rounded-3xl aspect-video bg-black " (load)="onIframeLoad()" (error)="onIframeLoad()" [src]="sanitizedUrl"></iframe>
+    <div class="flex  absolute items-center justify-center">
+      <div *ngIf="isIframeLoading"  class="animate-spin  rounded-full h-32 w-32 max-sm:h-16 max-sm:w-16 border-t-2 border-b-2 border-indigo-700 "></div>
+    </div>
+  </div>
+
+  <div  class="relative md:hidden text-white  " role="dialog" aria-modal="true">
+    <!-- Background backdrop, show/hide based on slide-over state. -->
+    <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-black overflow-x-hidden  sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+      <button (click)="closeModal()" type="button" class="-m-2.5 absolute top-2 right-2 rounded-md p-2.5 text-gray-300">
+        <span class="sr-only">Close menu</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+          <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-1.72 6.97a.75.75 0 10-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 101.06 1.06L12 13.06l1.72 1.72a.75.75 0 101.06-1.06L13.06 12l1.72-1.72a.75.75 0 10-1.06-1.06L12 10.94l-1.72-1.72z" clip-rule="evenodd" />
+        </svg>
+      </button>
+      <iframe class="w-full h-full bg-black " (load)="onIframeLoad()" (error)="onIframeLoad()" [src]="sanitizedUrl"></iframe>
+      <div class="flex max-md:hidden absolute items-center justify-center">
+        <div *ngIf="isIframeLoading"  class="animate-spin  rounded-full h-32 w-32 max-sm:h-16 max-sm:w-16 border-t-2 border-b-2 border-indigo-700 "></div>
+      </div>
+    </div>
+  </div>
+</div>

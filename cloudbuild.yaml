@@ -1,0 +1,17 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+  - 'build'
+  - '--tag=gcr.io/$PROJECT_ID/docker:latest'
+  - '--file=Dockerfile'
+  - '.'
+  id: 'base'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+images:
+- 'gcr.io/$PROJECT_ID/docker:latest'
+
+timeout: 1200s
+

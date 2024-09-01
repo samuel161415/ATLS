@@ -1,0 +1,51 @@
+<!-- <section id="partners" class="flex bg-bubbles px-8 max-sm:px-4 py-8 max-sm:py-4 pb-8  flex-col justify-center">
+
+  <p class="sm:text-4xl text-center text-2xl font-medium  mb-4 text-white"></p>
+  <div class=" hidden max-md:hidden   justify-between items-center  py-6 p-4 overflow-hidden my-5">
+    <div *ngFor="let slide of slides" class="mx-4">
+      <img src="{{slide.img}}" class="w-48 h-16  text-white" fill="currentColor">
+    </div>
+  </div>
+  
+  <div class="">
+    <ngx-slick-carousel class="carousel h-full p-6 my-10 flex overflow-hidden justify-center gap-x-12" #slickModal="slick-carousel" [config]="slideConfig" >
+      <div ngxSlickItem *ngFor="let slide of slides" class="slide mx-auto flex justify-center">
+        <img src="{{ slide.img }}" class="w-full h-24 px-16">
+      </div>
+    </ngx-slick-carousel>
+  </div>
+
+  <a  onclick="sponsor_us_modal.showModal()" class="mx-auto  rounded-full px-5 py-2.5 overflow-hidden group bg-gradient-to-r from-indigo-600 to-pink-500 relative hover:bg-gradient-to-r hover:from-indigo-600 hover:to-pink-500 text-white transition-all cursor-pointer ease-out duration-300">
+    <span class="absolute right-0 w-8  -mt-6 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+    <span class="relative mb-5">Support Us</span>
+  </a>
+
+  <dialog id="sponsor_us_modal" class="modal">
+    <form method="dialog" class="modal-box bg-gray-900 w-11/12 max-md:w-full">
+      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+      <div class="lg:flex-grow lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <h1 class="font-IBM text-transparent bg-gradient-to-r from-indigo-600 to-pink-500 bg-clip-text sm:text-4xl text-3xl mb-4 font-medium text-gray-300">Hello!</h1>
+        <p class="mt-2 text-gray-300 mb-8 w-full">Sponsor our AI Hackathon to support African students in harnessing the power of AI to tackle challenges. Your partnership will empower innovation across Africa and play a crucial role in shaping the future of AI-driven solutions on the continent.</p>
+        <div class="flex w-full flex-wrap md:justify-between space-y-4 justify-center items-end">
+          <a href="mailto:contact@a2sv.org" class="rounded-full px-5 py-2.5 overflow-hidden group bg-gradient-to-r from-indigo-600 to-pink-500 relative hover:bg-gradient-to-r hover:from-indigo-600 hover:to-pink-500 text-white transition-all ease-out duration-300">
+            <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+            <span class="relative">Contact Us</span>
+          </a>
+        </div>
+      </div>
+    </form>
+  </dialog>
+</section> -->
+<section class="w-full py-8 flex flex-col items-center">
+  <p class="sm:text-4xl text-center text-2xl font-medium  mb-4 text-white">Interview Partners</p>
+<owl-carousel-o [options]="customOptions" class=" w-full my-10" >
+  <ng-container *ngFor="let slide of slides; let index = index" >
+    <ng-template carouselSlide id="{{ 'slide-' + index }}"  class=" mx-auto flex justify-center ">
+      <img src="{{ slide.img }}" class="w-full  h-24 py-5 px-16  "></ng-template>  
+    </ng-container>
+</owl-carousel-o>
+<!-- <a  onclick="sponsor_us_modal.showModal()" class="mx-auto  rounded-full px-5 py-2.5 overflow-hidden group bg-gradient-to-r from-indigo-600 to-pink-500 relative hover:bg-gradient-to-r hover:from-indigo-600 hover:to-pink-500 text-white transition-all cursor-pointer ease-out duration-300">
+  <span class="absolute right-0 w-8  -mt-6 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+  <span class="relative mb-5">Support Us</span>
+</a> -->
+</section>

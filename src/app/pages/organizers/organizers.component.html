@@ -1,0 +1,40 @@
+<section
+  id="get-tickets"
+  class="text-white px-20 max-sm:px-4 body-font snap-start snap-always ease-in-out flex flex-col justify-center items-center"
+>
+  <div class="container mx-auto px-4">
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 place-items-center"
+    >
+      <div
+        *ngFor="let ticket of tickets"
+        class="h-full w-full bg_svg transition-transform duration-300 ease-in-out hover:scale-105"
+      >
+        <div
+          class="bg-blue-950 h-full w-full bg-opacity-50 flex flex-col items-center shadow-lg rounded-lg p-4"
+        >
+          <h4 class="text-lg font-semibold border border-white rounded-full px-6 py-2">{{ ticket.title }}</h4>
+          <p class="text-sm text-gray-500">Available tickets for</p>
+          <div class="price mt-2">
+            <h2 class="text-xl font-bold">{{ ticket.price }}</h2>
+          </div>
+
+          <div class="button mt-4">
+            <a
+              href="javascript:void(0)"
+              class="bg-gradient-to-r from-gold to-yellow-400 text-white px-4 py-2 rounded-full"
+              >Get Ticket</a
+            >
+          </div>
+          <div class="table-content mt-8 w-full">
+            <ul class=" pl-5 w-full flex flex-col items-center list-none">
+              <li *ngFor="let feature of ticket.features">
+                <p class="text-center">{{ feature }}</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

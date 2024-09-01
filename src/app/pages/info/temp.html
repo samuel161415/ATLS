@@ -1,0 +1,85 @@
+<div>
+    <div class="text-center py-16 text-3xl text-white">
+      Hackathon Timeline
+    </div>
+    <div class="container max-sm:px-4 w-2/3 max-md:w-full  pt-4 pb-24 flex flex-wrap justify-center">
+      <div class="flex flex-col  ">
+        <div class="md:pr-10 md:py-6">
+          <div *ngFor="let step of steps; let i = index" class="flex relative pb-8 lg:pb-12">
+            <div class="h-full w-16 absolute inset-0 flex items-center justify-center">
+              <div class="h-full w-1 bg-gray-600 pointer-events-none"></div>
+            </div>
+            <div
+              class="flex-shrink-0 w-16 h-16 rounded-full bg-[#0E0C15] border-white border-[0.25px] border-opacity-30 inline-flex items-center justify-center text-white relative z-10">
+              <!-- {{step.number}} -->
+        
+              <div *ngIf="step.number != '4'">
+              
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14" ></path>
+                  <path d="M22 4L12 14.01l-3-3" ></path>
+                </svg>
+                
+              </div>
+              <div *ngIf="step.number === '4'">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10"></circle>
+                </svg>
+              </div>
+              
+              
+            </div>
+
+            <div class="flex-grow pl-4">
+              <h2 class="leading-relaxed text-white font-light text-xl">{{step.title}}</h2>
+              <p class="text-sm text-gray-300 mt-2">{{step.description}}</p>
+              <div class="flex space-x-3 items-center text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                  class="w-6 h-6 flex-none text-white">
+                  <path
+                    d="M12.75 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM7.5 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM8.25 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM9.75 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM10.5 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM12.75 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM14.25 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM15 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM16.5 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM15 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM16.5 13.5a.75.75 0 100-1.5.75.75 0 000 1.5z" />
+                  <path fill-rule="evenodd"
+                    d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 3v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V7.5a3 3 0 013-3H6V3a.75.75 0 01.75-.75zm13.5 9a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5z"
+                    clip-rule="evenodd" />
+                </svg>
+                <p class="leading-relaxed text-gray-400">{{step.date}}</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="flex md:items-center relative">
+            <div class="h-1/2 max-md:h-1/4 w-16 absolute inset-0 flex items-center justify-center">
+              <div class="h-full  w-1 bg-gray-600 pointer-events-none"></div>
+            </div>
+            <div
+              class="flex-shrink-0 w-16  h-16 rounded-full bg-[#0E0C15] border-white border-[0.25px] border-opacity-30  inline-flex items-center justify-center text-white relative z-10">
+              <!-- <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                <path d="M22 4L12 14.01l-3-3"></path>
+              </svg> -->
+            </div>
+            <div class="flex-grow pl-4 flex-col">
+              <p class="leading-relaxed text-white font-light text-xl">Grand Finale</p>
+              <p class="text-sm text-gray-300 mt-2">The top 8 teams are flown to Ethiopia for an all-expense-paid
+                in-person event. They’ll compete for a total prize pool of $30,000 <span
+                  class="text-transparent bg-gradient-to-r from-indigo-600 to-pink-500 bg-clip-text animate-text">
+                </span>, presenting their projects to a distinguished jury.</p>
+                  
+              <div class="flex space-x-3 items-center text-gray-300 mt-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                  class="w-6 h-6 flex-none text-white">
+                  <path
+                    d="M12.75 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM7.5 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM8.25 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM9.75 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM10.5 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM12.75 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM14.25 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM15 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM16.5 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM15 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM16.5 13.5a.75.75 0 100-1.5.75.75 0 000 1.5z" />
+                  <path fill-rule="evenodd"
+                    d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 3v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V7.5a3 3 0 013-3H6V3a.75.75 0 01.75-.75zm13.5 9a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5z"
+                    clip-rule="evenodd" />
+                </svg>
+                <p class="leading-relaxed text-gray-400">11-13, November 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

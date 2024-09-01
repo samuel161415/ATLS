@@ -1,0 +1,72 @@
+<!-- <app-privacy-consent></app-privacy-consent> -->
+
+<app-consent></app-consent>
+<div *ngIf="!modalOpen" class="relative z-40">
+  <app-header [currentSection]="currentSection"></app-header>
+</div>
+<div *ngIf="isWinnerModalOpen" class="fixed h-full w-full pt-2 z-50">
+  <app-winner_modal
+    [showModal]="isModalOpen"
+    [modalData]="modalData"
+    (closeModalEvent)="closeModal()"
+  ></app-winner_modal>
+</div>
+
+<div
+  *ngIf="showPartnerButton"
+  style="position: fixed; top: 45vh; left: -40px; z-index: 1000"
+>
+  <a
+    href="https://form.typeform.com/to/opvWnrn7"
+    target="_blank"
+    
+  >
+  <!-- (click)="openButton('partner', 'https://form.typeform.com/to/opvWnrn7')" -->
+    <button
+      class="px-4 py-3 rounded-md transition-transform duration-300 ease-in-out bg-gradient-to-r from-indigo-600 to-pink-500"
+      style="transform: rotate(270deg)"
+    >
+      Buy Tickets Now
+    </button>
+  </a>
+</div>
+
+<div id="landing">
+  <app-landing></app-landing>
+</div>
+
+<div id="why-attend" class="relative z-30">
+  <app-quarter></app-quarter>
+</div>
+
+<div id="innovation" class="relative z-30">
+  <app-prize2024></app-prize2024>
+</div>
+
+<div id="leadership" class="relative z-30">
+  <app-workshop></app-workshop>
+</div>
+
+<div id="event-info" class="relative z-30">
+  <app-info></app-info>
+</div>
+
+
+
+<div id="get-tickets" class="relative z-30">
+  <app-organizers></app-organizers>
+</div>
+
+
+<div id="about-us" class="relative z-30">
+  <app-about-us></app-about-us>
+</div>
+<div id="partners" class="relative z-30">
+  <app-potential-partners></app-potential-partners>
+</div>
+
+
+<div id="footer" class="relative z-40">
+  <app-footer></app-footer>
+</div>
+

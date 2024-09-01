@@ -1,0 +1,7 @@
+.property-item {
+  flex: 1;
+  margin: 0 4px; /* Adjust the margin as needed */
+}
+.child-component {
+  margin: 0; /* Set margin to zero to remove spacing between child components */
+}

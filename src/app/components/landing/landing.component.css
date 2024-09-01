@@ -1,0 +1,111 @@
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  animation: gradientAnimation 10s ease infinite;
+}
+
+.button {
+  background:red;
+  animation:myfirst 5s;
+  -moz-animation:myfirst 5s infinite; /* Firefox */
+  -webkit-animation:myfirst 5s infinite; /* Safari and Chrome */
+}
+.bg_svg::-webkit-scrollbar {
+  width: 4px; /* Set the width of the scrollbar */
+  height : 4px;
+}
+
+/* Track */
+.bg_svg::-webkit-scrollbar-track {
+  background: white; /* Color of the scrollbar track */
+}
+
+.slick-prev, .slick-next { background-color: purple !important; height: 19px !important }
+
+/* Handle */
+.bg_svg::-webkit-scrollbar-thumb {
+  background: yellow; /* Color of the scrollbar handle */
+}
+.bg_svg{
+  /* Set your desired height */
+   background-image: url('/assets/back.svg');
+   background-size: contain; /* Adjust as needed */
+   background-repeat: repeat; 
+   background-position: top;
+   
+ }
+.vid{
+  z-index: -6;
+}
+
+
+@-moz-keyframes myfirst /* Firefox */ {
+  0% {background:red;}
+  50% {background:yellow;}
+  100% {background:red;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */ {
+  0% {background:red;}
+  50% {background:yellow;}
+  100% {background:red;}
+}
+.box {
+  background: rgba(0, 0, 0, 0.65);
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .01);
+}
+.box::after {
+  position: absolute;
+  content: "";
+  top: 8px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.9) translateZ(0);
+  filter: blur(10px);
+  background: linear-gradient(
+    to left,
+    rgba(255, 87, 112, 0.4), /* Add alpha for transparency */
+    rgba(228, 66, 141, 0.4),
+    rgba(196, 45, 168, 0.4),
+    rgba(158, 22, 195, 0.4),
+    rgba(101, 1, 222, 0.4),
+    rgba(158, 22, 195, 0.4),
+    rgba(196, 45, 168, 0.4),
+    rgba(228, 66, 141, 0.4),
+    rgba(255, 87, 112, 0.4)
+  );
+  background-size: 200% 200%;
+  animation: animateGlow 1.25s linear infinite;
+}
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+
+@keyframes tilt-n-move-shaking {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, 5px) rotate(5deg); }
+  50% { transform: translate(0, 0) rotate(0deg); }
+  75% { transform: translate(-5px, 5px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}

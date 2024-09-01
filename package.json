@@ -1,0 +1,61 @@
+{
+  "name": "hacks-website",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "gcp-build": "npm install --legacy-peer-deps && npm run build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "engine": {
+    "node": ">=16"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "17.0.0",
+    "@angular/cdk": "17.0.0",
+    "@angular/common": "17.0.0",
+    "@angular/compiler": "17.0.0",
+    "@angular/core": "17.0.0",
+    "@angular/forms": "17.0.0",
+    "@angular/material": "17.0.0",
+    "@angular/platform-browser": "17.0.0",
+    "@angular/platform-browser-dynamic": "17.0.0",
+    "@angular/router": "17.0.0",
+    "@cloudinary/ng": "^2.0.2",
+    "@cloudinary/url-gen": "^1.19.0",
+    "animejs": "^3.2.1",
+    "country-flag-emoji": "^1.0.3",
+    "crypto-js": "^4.1.1",
+    "gsap": "^3.12.1",
+    "intersection-observer": "^0.12.2",
+    "jquery": "^3.7.1",
+    "ngx-owl-carousel-o": "^17.0.0",
+    "ngx-sharebuttons": "^15.0.0",
+    "rxjs": "^7.8.1",
+    "share-menu": "^5.1.0",
+    "slick-carousel": "^1.6.40",
+    "tslib": "^2.6.3",
+    "zone.js": "^0.14.6"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "17.0.0",
+    "@angular/cli": "17.0.0",
+    "@angular/compiler-cli": "17.0.0",
+    "@types/animejs": "latest",
+    "@types/jasmine": "latest",
+    "autoprefixer": "latest",
+    "daisyui": "latest",
+    "jasmine-core": "latest",
+    "karma": "latest",
+    "karma-chrome-launcher": "latest",
+    "karma-coverage": "latest",
+    "karma-jasmine": "latest",
+    "karma-jasmine-html-reporter": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  }
+}

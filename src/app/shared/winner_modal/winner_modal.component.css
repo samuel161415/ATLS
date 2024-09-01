@@ -1,0 +1,21 @@
+::-webkit-scrollbar {
+    width: 5px; /* Set the width of the scrollbar */
+    height: 5px;
+  }
+  
+  /* Track */
+     /* Color of the scrollbar track */
+  /* ::-webkit-scrollbar-track {
+    background: white;
+  
+  } */
+  
+  /* Handle */
+ ::-webkit-scrollbar-thumb {
+    background: gray; /* Color of the scrollbar handle */
+  }
+
+  .container {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }

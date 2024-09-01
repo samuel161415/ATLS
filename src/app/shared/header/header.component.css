@@ -1,0 +1,9 @@
+/* banner.component.css */
+.custom-banner {
+  box-shadow: 0 4px 6px rgba(128, 0, 128, 0.5); /* Purple shadow with blur */
+}
+
+.custom-button {
+  border-color: rgba(128, 0, 128, 0.8); /* Purple border */
+  box-shadow: 0 4px 6px rgba(128, 0, 128, 0.5); /* Purple shadow with blur */
+}

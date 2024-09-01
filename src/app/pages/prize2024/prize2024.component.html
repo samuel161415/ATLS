@@ -1,0 +1,157 @@
+<section
+  id="innovation"
+  class="fade min-h-screen py-24 max-sm:px-4 max-md:py-16 max-xl:px-12 px-5 flex flex-col justify-center items-center"
+>
+  <div class="max-w-6xl ">
+    <div
+      class="mb-6 bg_svg flex flex-col md:flex-row items-center justify-between bg-blue-950 bg-opacity-50  p-6 rounded-lg shadow-lg"
+    >
+      <!-- Text and Statistics on the Left -->
+      <div class="flex-1">
+        <p class="text-left w-full max-md:text-center text-xl font-bold  lg:text-2xl">
+          AI for Impact Hackathon - 2024
+        </p>
+        <div class="space-y-4">
+          <div class="flex items-start md:text-lg font-normal py-3">
+            <img src="assets/star.svg" alt="star" class="pr-5" />
+            <p>
+              Attracted nearly
+              <strong
+                class="font-bold text-transparent bg-gradient-to-r from-gold  to-yellow-400  bg-clip-text"
+                >5,000</strong
+              >
+              registrations from students across
+              <strong
+                class="font-bold text-transparent bg-gradient-to-r from-gold  to-yellow-400 bg-clip-text"
+                >1,000+</strong
+              >
+              universities and high schools in
+              <strong
+                class="font-bold text-transparent bg-gradient-to-r from-gold  to-yellow-400 bg-clip-text"
+              >
+                48</strong
+              >
+              African countries.
+            </p>
+          </div>
+          <div class="flex items-start md:text-lg font-normal py-3">
+            <img src="assets/star.svg" alt="star" class="pr-5" />
+            <p>
+              Generated
+              <strong
+                class="font-bold text-transparent bg-gradient-to-r from-gold  to-yellow-400 bg-clip-text"
+                >690+</strong
+              >
+              project ideas, leading to
+              <strong
+                class="font-bold text-transparent bg-gradient-to-r from-gold  to-yellow-400 bg-clip-text"
+                >32</strong
+              >
+              projects in the semi-finals.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image on the Right -->
+      <div class="flex-1 mt-6 md:mt-0 md:ml-6">
+        <img
+          src="assets/group_photo1.jpg"
+          alt="Hackathon Image"
+          class="w-full h-auto rounded-lg shadow-lg"
+        />
+      </div>
+    </div>
+
+    <div class="w-full flex flex-col items-center mt-10">
+      <div class="container flex items-center justify-center">
+        <div
+          class="mt-2 w-full border-b border-gray-700 flex justify-between items-center cursor-pointer mb-12 transition-transform transform-all hover:scale-105"
+          (click)="toggleCards()"
+        >
+          <span class="flex items-center mr-10">
+            <p
+              class="sm:text-4xl text-2xl   font-bold text-transparent bg-gradient-to-r from-gold to-yellow-400 bg-clip-text"
+            >
+              Innovation Workshops
+            </p>
+          </span>
+          <span class="mb-2">
+            <svg
+              *ngIf="!showCards"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-8 h-8 text-bronze-400"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+
+            <svg
+              *ngIf="showCards"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-8 h-8 text-bronze-400 transform rotate-180"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <p
+        class="mx-auto leading-relaxed text-base text-white text-justify justify-between"
+      >
+        Attendees benefited from hands-on sessions led by experienced
+        professionals, who focused on practical skills in AI, machine learning,
+        software development, and entrepreneurship. These sessions equipped
+        participants with the essential tools for success. You can now explore
+        these insightful workshops by clicking the button below to reveal the
+        videos.
+      </p>
+
+      <div *ngIf="showCards" #cardsSection>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 max-sm:px-0 px-12 lg:grid-cols-3 gap-2"
+        >
+          <div
+            *ngFor="let workshop of workshops_lists; let i = index"
+            class="container px-5 py-5 mx-auto"
+          >
+            <div
+              class="h-full border-2 border-gray-800 rounded-lg overflow-hidden"
+            >
+              <iframe
+                class="lg:h-48 md:h-36 w-full object-cover object-center"
+                [src]="workshop.src"
+              ></iframe>
+              <div class="p-6">
+                <h1 class="title-font text-lg font-medium text-white mb-3">
+                  {{ workshop.title }}
+                </h1>
+                <p class="leading-relaxed mb-3 text-gray-400">
+                  {{ workshop.description }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</section>
