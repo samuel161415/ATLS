@@ -4,13 +4,7 @@
 <div *ngIf="!modalOpen" class="relative z-40">
   <app-header [currentSection]="currentSection"></app-header>
 </div>
-<div *ngIf="isWinnerModalOpen" class="fixed h-full w-full pt-2 z-50">
-  <app-winner_modal
-    [showModal]="isModalOpen"
-    [modalData]="modalData"
-    (closeModalEvent)="closeModal()"
-  ></app-winner_modal>
-</div>
+
 
 <div
   *ngIf="showPartnerButton"
@@ -21,7 +15,7 @@
     target="_blank"
     
   >
-  <!-- (click)="openButton('partner', 'https://form.typeform.com/to/opvWnrn7')" -->
+ 
     <button
       class="px-4 py-3 rounded-md transition-transform duration-300 ease-in-out bg-gradient-to-r from-indigo-600 to-pink-500"
       style="transform: rotate(270deg)"
@@ -36,25 +30,25 @@
 </div>
 
 <div id="why-attend" class="relative z-30">
-  <app-quarter></app-quarter>
+  <app-why-attend></app-why-attend>
 </div>
 
 <div id="innovation" class="relative z-30">
-  <app-prize2024></app-prize2024>
+  <app-innovation></app-innovation>
 </div>
 
 <div id="leadership" class="relative z-30">
-  <app-workshop></app-workshop>
+  <app-leadership></app-leadership>
 </div>
 
 <div id="event-info" class="relative z-30">
-  <app-info></app-info>
+  <app-event-info></app-event-info>
 </div>
 
 
 
 <div id="get-tickets" class="relative z-30">
-  <app-organizers></app-organizers>
+  <app-get-tickets></app-get-tickets>
 </div>
 
 

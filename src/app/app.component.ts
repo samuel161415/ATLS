@@ -8,8 +8,7 @@ import {
  OnDestroy
 } from '@angular/core';
 
-import { LocalStorageService } from './shared/local-storage.service';
-// import { PrivacyConsentService } from './privacy_consent/privacy-consent.service';
+
 import { Cloudinary, CloudinaryImage } from '@cloudinary/url-gen';
 import {fill} from "@cloudinary/url-gen/actions/resize";
 import { TermsPluginLoaderService } from './privacy_consent/terms-plugin-loader.service'
@@ -33,13 +32,11 @@ export class AppComponent implements OnInit, OnDestroy  {
   modalSubscription: Subscription | undefined;
   constructor(
     private _el: ElementRef,
-    private localStorage: LocalStorageService,
     private termsPluginLoaderService: TermsPluginLoaderService,
     private modalService: ModalService,
     private winnerModalService: WinnerModalService
     // private privacyConsentService: PrivacyConsentService // Add the PrivacyConsentService here
   ) {
-    this.localStorage.resetWaitingStatus();
   }
   openButton(buttonName: string, link: string) {
     window.open(link, '_blank');
@@ -89,7 +86,7 @@ export class AppComponent implements OnInit, OnDestroy  {
       this.modalData = data;
     });
     
-    const hasConsent = localStorage.getItem('consentGiven');
+    
     this.termsPluginLoaderService.loadPlugin();
 
    
