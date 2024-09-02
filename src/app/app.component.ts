@@ -240,5 +240,13 @@ export class AppComponent implements OnInit, OnDestroy  {
 
     this.showPartnerButton = scrollPosition > triggerPosition;
   }
+  scrollToSection(sectionId: string): void {
+    const canNavigate: boolean =
+      !document.body.classList.contains("overflow-hidden");
+    const element = document.getElementById(sectionId);
+    if (element != null && canNavigate) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }
   
 }

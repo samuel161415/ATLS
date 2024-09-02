@@ -1,57 +1,59 @@
 <section
   id="leadership"
-  class="m-auto  py-5 px-5 flex flex-col items-center justify-center"
+  class="m-auto py-5 px-5 flex flex-col items-center justify-center"
 >
-<div class="container py-16 mx-auto flex flex-col justify-center items-center  max-w-6xl">
-  <div class="container flex items-center justify-center">
-    <div
-    class="mt-2 w-full  border-b border-gray-700 flex justify-between items-center cursor-pointer mb-12 transition-transform transform-all hover:scale-105"
-    (click)="toggleCards()"
+  <div
+    class="container py-16 mx-auto flex flex-col justify-center items-center max-w-6xl"
   >
-      <span class="flex items-center mr-10">
-        <p
-          class="sm:text-4xl text-2xl text-center font-bold text-transparent bg-gradient-to-r from-gold to-yellow-400 bg-clip-text"
-        >
-          Keynote speakers
-        </p>
-      </span>
-      <span class="mb-2">
-        <svg
-          *ngIf="!showCards"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-8 h-8 text-pink-400"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
-          />
-        </svg>
+    <div class="container flex items-center justify-center">
+      <div
+        class="mt-2 w-full border-b border-gray-700 flex justify-between items-center cursor-pointer mb-12 transition-transform transform-all hover:scale-105"
+        (click)="toggleSpeakerCards()"
+      >
+        <span class="flex items-center mr-10">
+          <p
+            class="sm:text-4xl text-2xl text-center font-bold text-transparent bg-gradient-to-r from-gold to-yellow-400 bg-clip-text"
+          >
+            Keynote speakers
+          </p>
+        </span>
+        <span class="mb-2">
+          <svg
+            *ngIf="!showSpeakerCards"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-8 h-8 text-gold"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
 
-        <svg
-          *ngIf="showCards"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-8 h-8 text-pink-400 transform rotate-180"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
-          />
-        </svg>
-      </span>
+          <svg
+            *ngIf="showSpeakerCards"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-8 h-8 text-gold transform rotate-180"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </span>
+      </div>
     </div>
-  </div>
 
-  <!-- <p
+    <!-- <p
     class=" mb-5 mx-auto leading-relaxed text-base text-white text-justify justify-between"
   >
     Get to know the incredible team behind Hackathon 2024! Our speakerss are
@@ -60,52 +62,151 @@
     events to fostering an inclusive community, they work tirelessly to ensure
     everything runs smoothly.
   </p> -->
-  <div
-    #speakersSection
-    *ngIf="showCards"
-    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-5"
-  >
-    <!-- group hover:shadow-md hover:border-2 transition duration-300 hover:bg-slate-50 hover:border-solid -->
     <div
-      *ngFor="let speakers of speakers"
-      tabindex="0"
-      class="px-4 text-center rounded border border-gray-800 group hover:bg-gray-700 hover:shadow-md hover:border transition duration-300 hover:border-solid p-2 transform hover:scale-105"
+      #speakersSection
+      *ngIf="showSpeakerCards"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-5"
     >
-      <a (click)="setLinks(speakers.contact)" class="cursor-pointer">
-        <div class="flex flex-col justify-between items-center h-full">
-          <div class="flex flex-col justify-center items-center">
-            <div
-              class="w-[150px] h-[150px] text-center bg-gray-500 p-2 rounded-full transition-transform transform-gpu hover:scale-105 hover:bg-gray-400"
-            >
-              <img
-                alt="team"
-                class="w-full h-full bg-gradient-to-r from-blue-400 to-green-300 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                src="{{ speakers.image }}"
-              />
+      <!-- group hover:shadow-md hover:border-2 transition duration-300 hover:bg-slate-50 hover:border-solid -->
+      <div
+        *ngFor="let speakers of speakers"
+        tabindex="0"
+        class="px-4 text-center rounded border border-gray-800 group hover:bg-gray-700 hover:shadow-md hover:border transition duration-300 hover:border-solid p-2 transform hover:scale-105"
+      >
+        <a (click)="setLinks(speakers.contact)" class="cursor-pointer">
+          <div class="flex flex-col justify-between items-center h-full">
+            <div class="flex flex-col justify-center items-center">
+              <div
+                class="w-[150px] h-[150px] text-center bg-gray-500 p-2 rounded-full transition-transform transform-gpu hover:scale-105 hover:bg-gray-400"
+              >
+                <img
+                  alt="team"
+                  class="w-full h-full bg-gradient-to-r from-blue-400 to-green-300 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                  src="{{ speakers.image }}"
+                />
+              </div>
+              <h1 class="text-center text-3xl py-3 font-bold">
+                {{ speakers.name }}
+              </h1>
+              <p class="py-3 px-4 text-justify justify-between">
+                {{ speakers.description }}
+              </p>
             </div>
-            <h1 class="text-center text-3xl py-3 font-bold">
-              {{ speakers.name }}
-            </h1>
-            <p class="py-3 px-4 text-justify justify-between">
-              {{ speakers.description }}
-            </p>
+            <div class="group relative">
+              <div class="hidden group-hover:inline-block text-white">
+                <img
+                  src="assets/Linkedin.svg"
+                  class="w-10 h-10 text-white"
+                  alt=""
+                />
+              </div>
+            </div>
           </div>
-          <div class="group relative">
-            <div class="hidden group-hover:inline-block text-white">
-              <img
-                src="assets/Linkedin.svg"
-                class="w-10 h-10 text-white"
-                alt=""
-              />
+        </a>
+
+        <!-- <a [href]="judge.contact" target="_blank">
+      
+    </a> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Card Container -->
+
+  <div class="container w-full flex flex-col items-center mt-10 max-w-6xl">
+    <div class="container flex items-center justify-center">
+      <div
+        class="mt-2 w-full border-b border-gray-700 flex justify-between items-center cursor-pointer mb-12 transition-transform transform-all hover:scale-105"
+        (click)="togglePartnerCards()"
+      >
+        <span class="flex items-center mr-10">
+          <p
+            class="sm:text-4xl text-2xl font-bold text-transparent bg-gradient-to-r from-gold to-yellow-400 bg-clip-text"
+          >
+            Partnership
+          </p>
+        </span>
+        <span class="mb-2">
+          <svg
+            *ngIf="!showPartnerCards"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-8 h-8 text-bronze-400"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+
+          <svg
+            *ngIf="showPartnerCards"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-8 h-8 text-bronze-400 transform rotate-180"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+
+    <p
+      class="mx-auto leading-relaxed text-base text-white text-justify justify-between"
+    >
+      These are our strategic partnerships, showcasing the collaborative
+      relationships and invaluable contributions of our key partners, which are
+      fundamental to the success of the Africa Tech Leadership Summit. Each
+      partner plays a vital role in supporting various facets of the summit,
+      ranging from academic excellence to logistical coordination, ensuring a
+      comprehensive and impactful experience for all participants.
+    </p>
+
+    <div *ngIf="showPartnerCards" #cardsSection>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 max-sm:px-0 lg:grid-cols-3 gap-2 mt-10"
+      >
+        <div
+          *ngFor="let partner of partners; let i = index"
+          class="px-4 text-center rounded border border-gray-800 group hover:bg-gray-700 hover:shadow-md hover:border transition duration-300 hover:border-solid p-2 transform hover:scale-105"
+        >
+          <div class="flex flex-col justify-between items-center h-full">
+            <div class="flex flex-col justify-center items-center">
+              <!-- Image Section -->
+              <div
+                class="w-[170px] h-[170px] text-center bg-gray-500 p-1 rounded-full transition-transform transform-gpu hover:scale-105 hover:bg-gray-400"
+              >
+                <img
+                  alt="partners"
+                  class="w-full h-full bg-gradient-to-r from-blue-400 to-green-300 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                  src="{{ partner.image }}"
+                />
+              </div>
+              <!-- Title -->
+              <h1 class="text-center text-3xl py-2 font-bold text-white">
+                {{ partner.name }}
+              </h1>
+              <!-- Role Section -->
+              <h2 class="font-semibold text-lg">{{ partner.role }}</h2>
+              <!-- Description -->
+              <p class="py-2 px-4 text-center">
+                {{ partner.description }}
+              </p>
             </div>
           </div>
         </div>
-      </a>
-
-      <!-- <a [href]="judge.contact" target="_blank">
-      
-    </a> -->
+      </div>
     </div>
   </div>
-</div>
 </section>
