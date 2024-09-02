@@ -9,9 +9,9 @@ export class PotentialPartnersComponent {
   slides = [
     { img: 'assets/Google_logo.svg' },
     { img: 'assets/Bloomberg_logo.svg' },
-    { img: 'assets/Palantir_Technologies_logo%201.svg' },
-    { img: 'assets/Databricks_logo.svg' },
-    { img: 'assets/Meta_logo.svg' },
+    { img: 'assets/mastercard2.svg' },
+    { img: 'assets/upwork.svg' },
+    // { img: 'assets/eaii4.png' },
   ];
 
   slideConfig = {
