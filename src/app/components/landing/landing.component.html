@@ -8,7 +8,6 @@
     <div
       class="order-2 md:order-1 text-white max-md:mb-5 flex-1 flex flex-col justify-end max-md:items-center"
     >
-    
       <section
         class="left col-span-2 px-5 flex flex-col items-center md:items-start justify-center"
       >
@@ -43,22 +42,18 @@
                 <p class="">
                   The summit brings together Africa's brightest
                   <strong
-                    class="font-bold text-transparent bg-gradient-to-r from-gold  to-yellow-400 bg-clip-text"
-                    >tech students,
-                    emerging entrepreneurs,</strong
+                    class="font-bold text-transparent bg-gradient-to-r from-gold to-yellow-400 bg-clip-text"
+                    >tech students, emerging entrepreneurs,</strong
                   >
                   and
                   <strong
-                    class="font-bold text-transparent bg-gradient-to-r from-gold  to-yellow-400  bg-clip-text"
+                    class="font-bold text-transparent bg-gradient-to-r from-gold to-yellow-400 bg-clip-text"
                     >innovative leaders</strong
                   >
-                  to showcase the
-                  continent's tech ecosystem, foster collaboration, and ignite
-                  transformative conversations.
-                  
+                  to showcase the continent's tech ecosystem, foster
+                  collaboration, and ignite transformative conversations.
                 </p>
               </div>
-              
             </div>
           </div>
 
@@ -66,8 +61,8 @@
             class="flex flex-col md:flex-row max-md:items-center justify-start"
           >
             <button
-             (click)="scrollToSection('get-tickets')"
-              class="max-md:mt-5 text-sm rounded-full px-8 py-3 text-white transition-all bg-gradient-to-r from-gold  to-yellow-400  cursor-pointer ease-out duration-300 left-1/2 hover:bg-gradient-to-r from-gold-700 "
+              (click)="scrollToSection('get-tickets')"
+              class="max-md:mt-5 text-sm rounded-full px-8 py-3 text-white transition-all bg-gradient-to-r from-gold to-yellow-400 cursor-pointer ease-out duration-300 left-1/2 hover:bg-gradient-to-r from-gold-700"
             >
               <span>Buy Tickets Now</span>
             </button>
@@ -91,8 +86,20 @@
             aria-hidden="true"
           >
             <div class="relative h-full w-full">
+              <!-- Thumbnail Image -->
+              <img
+                *ngIf="showThumbnail"
+                src="assets/vid_thu.png"
+                alt="Video Thumbnail"
+                class="w-full h-full object-cover cursor-pointer"
+                (click)="playVideo()"
+              />
+
+              <!-- Video Element -->
               <video
-                
+                *ngIf="!showThumbnail"
+                #videoPlayer
+                autoplay
                 controls
                 loop
                 class="w-full object-cover h-full"

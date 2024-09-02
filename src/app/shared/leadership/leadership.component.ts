@@ -108,7 +108,8 @@ export class LeadershipComponent {
         'The government supports the summit by inviting international ministers for a pan-African collaboration, securing the prestigious Adwa Museum venue, and managing visa and accommodation arrangements for international guests.',
       role: 'Diplomatic Engagement & Logistical Support',
       image: 'assets/gov_c.png', // Replace with actual path to the image
-      link: 'https://www.ethiopia.gov.et/' // Website link
+      link: 'https://ethiopianembassy.org/government/' // Website link
+      // https://ethiopianembassy.org/government/
     },
     {
       name: 'Ethiopian Artificial Intelligence Institute (EAII)',

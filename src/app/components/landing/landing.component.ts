@@ -13,21 +13,24 @@ export class LandingComponent {
   videoSrc = 'https://res.cloudinary.com/eskalate/video/upload/v1725195587/video/atls_compressed.mp4';
   videoElement: HTMLVideoElement | undefined;
   playing = false;
-
-
-  
-
  
   isMuted=true;
   
   @Output() toggleChatEvent = new EventEmitter<boolean>();
- 
-  
+  showThumbnail = true;
 
+  // ViewChild to reference the video element
+  @ViewChild('videoPlayer', { static: false }) videoPlayer!: ElementRef<HTMLVideoElement>;
 
+  // Method to play the video and hide the thumbnail
+  playVideo() {
+    this.showThumbnail = false; // Hide the thumbnail
+    const video: HTMLVideoElement = this.videoPlayer.nativeElement;
+    video.play(); // Play the video
+  }
   scrollDown(): void {
     const canNavigate: boolean = !document.body.classList.contains('overflow-hidden');
-    const element = document.getElementById('prize2024');
+    const element = document.getElementById('why-attend');
     if (element != null && canNavigate) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
