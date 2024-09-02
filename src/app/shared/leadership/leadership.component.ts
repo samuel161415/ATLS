@@ -13,19 +13,12 @@ export interface Organizers {
   styleUrls: ["./leadership.component.css"],
 })
 export class LeadershipComponent {
-  @ViewChild('leadershipSection') leadershipSection!: ElementRef;
+  @ViewChild('speakersSection') speakersSection!: ElementRef;
+  @ViewChild('partnersSection') partnersSection!: ElementRef;
 
   showSpeakerCards = true;
   showPartnerCards = true
   speakers = [
-    // {
-    //   name: "Beimnet Bekele",
-    //   description:
-    //     "Meet Beimnet Bekele, an Aspiring Machine Learning Researcher and accomplished Software Engineer. With a keen interest in Machine Learning, Beimnet dedicates his time to exploring and advancing this cutting-edge field. His expertise spans across software engineering and machine learning, where he continually strives to innovate and contribute to the ever-evolving world of technology.",
-    //   image:
-    //     "https://res.cloudinary.com/eskalate/image/upload/v1722869427/team/bemni_hack.png",
-    //   contact: "https://www.linkedin.com/in/beimnet-guta/",
-    // },
     {
       name: "Yordanos Asmare",
       description:
@@ -144,9 +137,9 @@ export class LeadershipComponent {
   }
 
   scrollToSpeakerCardsSection() {
-    this.leadershipSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
+    this.speakersSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
   scrollToPartnerCardsSection() {
-    this.leadershipSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
+    this.partnersSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
 }
