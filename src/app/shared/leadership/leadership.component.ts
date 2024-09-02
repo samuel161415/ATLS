@@ -15,7 +15,8 @@ export interface Organizers {
 export class LeadershipComponent {
   @ViewChild('leadershipSection') leadershipSection!: ElementRef;
 
-  showCards = true;
+  showSpeakerCards = true;
+  showPartnerCards = true
   speakers = [
     // {
     //   name: "Beimnet Bekele",
@@ -40,6 +41,14 @@ export class LeadershipComponent {
       image:
         "https://res.cloudinary.com/eskalate/image/upload/v1700745290/Hackathon/emre.png",
       contact: "https://www.linkedin.com/in/emre-varol/",
+    },
+    {
+      name: "Elefelious Belay",
+      description:
+        "Elefelious G. Belay, an Assistant Professor of Software Engineering, brings 15+ years of industry, academia, and research experience. Recognized with research awards from Facebook, JPMorgan, IDRC/Carleton University, and more, he has held senior roles in the industry. Currently, he serves as the Dean of the School of Information Technology and Engineering at AAU.",
+      image:
+        "https://res.cloudinary.com/eskalate/image/upload/v1670689587/team/elefelious_bg.png",
+      contact: "https://www.linkedin.com/in/elefelious-getachew-belay",
     },
     // {
     //   name: "Rediet Ferew",
@@ -84,22 +93,59 @@ export class LeadershipComponent {
     // },
   ];
 
+  partners = [
+    {
+      name: 'Addis Ababa Institute of Technology (AAIT)',
+      description:
+        'AAU contributes by bringing prominent academics and facilitating participation from leaders of other African universities, fostering a continent-wide academic collaboration.',
+      role: 'Academic Participation & Regional Engagement',
+      image: 'assets/aait_c.png', // Replace with actual path to the image
+      link: 'https://www.aau.edu.et/' // Website link
+    },
+    {
+      name: 'Ethiopian Government',
+      description:
+        'The government supports the summit by inviting international ministers for a pan-African collaboration, securing the prestigious Adwa Museum venue, and managing visa and accommodation arrangements for international guests.',
+      role: 'Diplomatic Engagement & Logistical Support',
+      image: 'assets/gov_c.png', // Replace with actual path to the image
+      link: 'https://www.ethiopia.gov.et/' // Website link
+    },
+    {
+      name: 'Ethiopian Artificial Intelligence Institute (EAII)',
+      description:
+        'These entities offer support for winning projects, including funding and mentorship, and engage with Ethiopia’s local tech sector, enhancing the summit\'s impact on innovation and technological growth.',
+      role: 'Innovation Support & Sector Engagement',
+      image: 'assets/eaii_c.png', // Replace with actual path to the image
+      link: 'https://eaii.gov.et/' // Website link
+    }
+  ]
+
   setLinks(link: string) {
     window.open(link, "_blank");
   }
 
-  toggleCards() {
-    this.showCards = !this.showCards; // Toggle the visibility
-    if (this.showCards) {
+  toggleSpeakerCards() {
+    this.showSpeakerCards = !this.showSpeakerCards; // Toggle the visibility
+    if (this.showSpeakerCards) {
       setTimeout(() => {
-        this.scrollToCardsSection();
+        this.scrollToSpeakerCardsSection();
       }, 0);
     }
   }
 
-  scrollToCardsSection() {
-    console.log("scrool to section");
-    
+  togglePartnerCards() {
+    this.showPartnerCards = !this.showPartnerCards; // Toggle the visibility
+    if (this.showPartnerCards) {
+      setTimeout(() => {
+        this.scrollToPartnerCardsSection();
+      }, 0);
+    }
+  }
+
+  scrollToSpeakerCardsSection() {
+    this.leadershipSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
+  scrollToPartnerCardsSection() {
     this.leadershipSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
 }

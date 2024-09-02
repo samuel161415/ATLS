@@ -14,20 +14,7 @@ export class LandingComponent {
   videoElement: HTMLVideoElement | undefined;
   playing = false;
 
-  // togglePlay(): void {
-  //   if (!this.videoElement) return;
-  //   if (this.videoElement.paused) {
-  //     this.videoElement.play();
-  //     this.playing = true;
-  //   } else {
-  //     this.videoElement.pause();
-  //     this.playing = false;
-  //   }
-  // }
 
-  // onVideoEvent(event: Event): void {
-  //   this.videoElement = event.target as HTMLVideoElement;
-  // }
   
 
  
@@ -46,6 +33,14 @@ export class LandingComponent {
     }
   }
 
+  scrollToSection(sectionId: string): void {
+    const canNavigate: boolean =
+      !document.body.classList.contains("overflow-hidden");
+    const element = document.getElementById(sectionId);
+    if (element != null && canNavigate) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 
   setActiveButton(buttonName: string, link: string) {
     
